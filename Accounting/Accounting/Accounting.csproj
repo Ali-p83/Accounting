@@ -98,5 +98,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="external-accounting-business-and-financial-itim2101-lineal-color-itim2101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-user-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-password-64.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

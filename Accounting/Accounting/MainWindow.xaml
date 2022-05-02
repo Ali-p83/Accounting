@@ -7,8 +7,73 @@
         xmlns:local="clr-namespace:Accounting"
         mc:Ignorable="d"
         Title="MainWindow" Height="515.769" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="{x:Null}" AllowsTransparency="True" WindowStyle="None">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="135">
+                            <Rectangle Fill="#FF040303" HorizontalAlignment="Left" Height="45" RadiusY="15" RadiusX="15" VerticalAlignment="Top" Width="135"/>
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Sign in" VerticalAlignment="Top" FontSize="24" Margin="29,6.076,0,0" Foreground="White"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true"/>
+                            <Trigger Property="IsMouseOver" Value="true"/>
+                            <Trigger Property="IsPressed" Value="true"/>
+                            <Trigger Property="IsEnabled" Value="false"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="496" Margin="10,10,0,0" VerticalAlignment="Top" Width="780" Background="White" CornerRadius="15"/>
+        <Border BorderThickness="1" HorizontalAlignment="Left" Height="496" Margin="10,10,0,0" VerticalAlignment="Top" Width="780" Background="#FF191919" CornerRadius="15">
+            <Rectangle HorizontalAlignment="Left" Height="50" Margin="214,304,0,0" VerticalAlignment="Top" Width="325" RadiusY="15" RadiusX="15" Fill="#FF474747"/>
+        </Border>
+        <Border BorderThickness="1" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="55" Background="#FF1515FF" CornerRadius="15">
+            <Path Data="M0.91570807,29.911944 L0.91611579,209.49971 C0.91611579,209.49971 -0.064265253,249.15198 49.935735,249.15198 99.935735,249.15198 729.05867,249.15198 729.05867,249.15198 729.05867,249.15198 777.82904,249.01392 777.82904,289.01392 777.82904,329.01392 777.9126,24.929224 777.9126,24.929224 L759.01999,24.929233 759.01999,1.095164 29.96122,1.1785416 29.96122,29.912265 z" Fill="#FF1515FF" HorizontalAlignment="Left" Height="292.556" Margin="-0.084,0.083,-724.917,-244.639" Stretch="Fill" VerticalAlignment="Top" Width="778.001"/>
+        </Border>
+        <Border BorderThickness="1" HorizontalAlignment="Left" Height="50" Margin="730,10,0,0" VerticalAlignment="Top" Width="60" Background="#FF1515FF" CornerRadius="15"/>
+        <Rectangle HorizontalAlignment="Left" Height="230" Margin="465,15,0,0" VerticalAlignment="Top" Width="275">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="external-accounting-business-and-financial-itim2101-lineal-color-itim2101.png" Stretch="Uniform"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="WelCome To Accounting&#xD;&#xA;Program" HorizontalAlignment="Left" Height="80" Margin="110,90,0,0" VerticalAlignment="Top" Width="315" FontSize="25" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Login To Your Account" HorizontalAlignment="Left" Height="45" Margin="260.998,270,0,0" VerticalAlignment="Top" Width="260" FontSize="25" Foreground="White"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="225,375,0,0" VerticalAlignment="Top" Width="325" RadiusY="15" RadiusX="15" Fill="#FF474747"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="45" Margin="225,440,0,0" VerticalAlignment="Top" Width="135" Style="{DynamicResource ButtonStyle1}"/>
+        <Image  HorizontalAlignment="Left" Height="50" Margin="235,315,0,0" VerticalAlignment="Top" Width="50" Source="icons8-user-64.png"/>
+        <Image HorizontalAlignment="Left" Height="50" Margin="235,375,0,0" VerticalAlignment="Top" Width="50" Source="icons8-password-64.png"/>
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="288,328,0,162.769" TextWrapping="Wrap" Text="UserName" VerticalAlignment="Center" Width="240" SelectionBrush="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Background="{x:Null}" UndoLimit="101" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="289,388,0,102.769" TextWrapping="Wrap" Text="Password" VerticalAlignment="Center" Width="240" SelectionBrush="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Background="{x:Null}" UndoLimit="101" FontSize="16"/>
 
     </Grid>
 </Window>
