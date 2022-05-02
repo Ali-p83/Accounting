@@ -56,5 +56,14 @@ namespace Accounting
                 textBox.Text = null;
             }
         }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Tab)
+            {
+                new Loading().Show();
+                Close();
+            }
+        }
     }
 }
