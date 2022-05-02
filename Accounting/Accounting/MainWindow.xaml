@@ -54,11 +54,9 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Border BorderThickness="1" HorizontalAlignment="Left" Height="496" Margin="10,10,0,0" VerticalAlignment="Top" Width="780" Background="#FF191919" CornerRadius="15">
-            <Rectangle HorizontalAlignment="Left" Height="50" Margin="214,304,0,0" VerticalAlignment="Top" Width="325" RadiusY="15" RadiusX="15" Fill="#FF474747"/>
-        </Border>
+        <Border BorderThickness="1" HorizontalAlignment="Left" Height="496" Margin="10,10,0,0" VerticalAlignment="Top" Width="780" Background="#FF191919" CornerRadius="15"/>
         <Border BorderThickness="1" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="55" Background="#FF1515FF" CornerRadius="15">
-            <Path Data="M0.91570807,29.911944 L0.91611579,209.49971 C0.91611579,209.49971 -0.064265253,249.15198 49.935735,249.15198 99.935735,249.15198 729.05867,249.15198 729.05867,249.15198 729.05867,249.15198 777.82904,249.01392 777.82904,289.01392 777.82904,329.01392 777.9126,24.929224 777.9126,24.929224 L759.01999,24.929233 759.01999,1.095164 29.96122,1.1785416 29.96122,29.912265 z" Fill="#FF1515FF" HorizontalAlignment="Left" Height="292.556" Margin="-0.084,0.083,-724.917,-244.639" Stretch="Fill" VerticalAlignment="Top" Width="778.001"/>
+            <Path Data="M0.13334987,10.276176 L0.42605577,200.82536 C0.42605577,200.82536 -0.80499753,220.38415 49.195003,220.38415 99.195003,220.38415 728.31821,220.38472 728.31821,220.38472 728.31821,220.38472 776.75508,220.38398 777.08848,240.88247 777.73898,280.87718 777.1613,15.401054 777.1613,15.401054 L758.27946,15.401054 757.92551,0.57141453 29.220793,0.60369939 30.302861,13.948795 z" Fill="#FF1515FF" HorizontalAlignment="Left" Height="476.947" Margin="-0.125,0.062,-725.143,-429.009" Stretch="Fill" VerticalAlignment="Top" Width="778.268" Style="{DynamicResource FocusVisual}"/>
         </Border>
         <Border BorderThickness="1" HorizontalAlignment="Left" Height="50" Margin="730,10,0,0" VerticalAlignment="Top" Width="60" Background="#FF1515FF" CornerRadius="15"/>
         <Rectangle HorizontalAlignment="Left" Height="230" Margin="465,15,0,0" VerticalAlignment="Top" Width="275">
@@ -67,13 +65,16 @@
             </Rectangle.Fill>
         </Rectangle>
         <Label Content="WelCome To Accounting&#xD;&#xA;Program" HorizontalAlignment="Left" Height="80" Margin="110,90,0,0" VerticalAlignment="Top" Width="315" FontSize="25" Foreground="White" FontWeight="Bold"/>
-        <Label Content="Login To Your Account" HorizontalAlignment="Left" Height="45" Margin="260.998,270,0,0" VerticalAlignment="Top" Width="260" FontSize="25" Foreground="White"/>
-        <Rectangle HorizontalAlignment="Left" Height="50" Margin="225,375,0,0" VerticalAlignment="Top" Width="325" RadiusY="15" RadiusX="15" Fill="#FF474747"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="45" Margin="225,440,0,0" VerticalAlignment="Top" Width="135" Style="{DynamicResource ButtonStyle1}"/>
-        <Image  HorizontalAlignment="Left" Height="50" Margin="235,315,0,0" VerticalAlignment="Top" Width="50" Source="icons8-user-64.png"/>
-        <Image HorizontalAlignment="Left" Height="50" Margin="235,375,0,0" VerticalAlignment="Top" Width="50" Source="icons8-password-64.png"/>
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="288,328,0,162.769" TextWrapping="Wrap" Text="UserName" VerticalAlignment="Center" Width="240" SelectionBrush="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Background="{x:Null}" UndoLimit="101" FontSize="16"/>
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="289,388,0,102.769" TextWrapping="Wrap" Text="Password" VerticalAlignment="Center" Width="240" SelectionBrush="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Background="{x:Null}" UndoLimit="101" FontSize="16"/>
+        <Label Content="Login To Your Account" HorizontalAlignment="Left" Height="45" Margin="260.998,267,0,0" VerticalAlignment="Top" Width="260" FontSize="25" Foreground="White" Visibility="Hidden"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="225,375,0,0" VerticalAlignment="Top" Width="325" RadiusY="15" RadiusX="15" Fill="#FF474747" Visibility="Hidden"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="45" Margin="225,440,0,0" VerticalAlignment="Top" Width="135" Style="{DynamicResource ButtonStyle1}" Visibility="Hidden"/>
+        <Image HorizontalAlignment="Left" Height="50" Margin="235,375,0,0" VerticalAlignment="Top" Width="50" Source="icons8-password-64.png" Visibility="Hidden"/>
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="289,388,0,102.769" TextWrapping="Wrap" Text="Password" VerticalAlignment="Center" Width="240" SelectionBrush="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Background="{x:Null}" UndoLimit="101" FontSize="16" Visibility="Hidden"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="225,315,0,0" VerticalAlignment="Top" Width="325" RadiusY="15" RadiusX="15" Fill="#FF474747" Visibility="Hidden"/>
+        <Image  HorizontalAlignment="Left" Height="50" Margin="235,315,0,0" VerticalAlignment="Top" Width="50" Source="icons8-user-64.png" Visibility="Hidden"/>
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="288,328,0,162.769" TextWrapping="Wrap" Text="UserName" VerticalAlignment="Center" Width="240" SelectionBrush="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Background="{x:Null}" UndoLimit="101" FontSize="16" Visibility="Hidden"/>
+        <Label Content="Click Login to enter&#xD;&#xA;Powered by ALI" HorizontalAlignment="Left" Height="80" Margin="110,182,0,0" VerticalAlignment="Top" Width="315" Foreground="White" FontWeight="Bold" FontSize="14"/>
+        <Label Content="Login " HorizontalAlignment="Left" Height="45" Margin="350,446,0,0" VerticalAlignment="Top" Width="75" FontSize="25" Foreground="White"/>
 
     </Grid>
 </Window>
