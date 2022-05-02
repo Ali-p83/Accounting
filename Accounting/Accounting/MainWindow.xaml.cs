@@ -24,5 +24,37 @@ namespace Accounting
         {
             InitializeComponent();
         }
+
+        private void TextBox1_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if(textBox1.Text == "UserName")
+            {
+                textBox1.Text = null;
+            }
+        }
+
+        private void TextBox1_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "UserName";
+            }
+        }
+
+        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBox.Text == "")
+            {
+                textBox.Text = "Password";
+            }
+        }
+
+        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBox.Text == "Password")
+            {
+                textBox.Text = null;
+            }
+        }
     }
 }
