@@ -175,5 +175,8 @@
   <ItemGroup>
     <Resource Include="icons8-shop-50.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="external-user-ecommerce-basic-1-sbts2018-outline-color-sbts2018.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

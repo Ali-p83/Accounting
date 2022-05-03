@@ -408,8 +408,260 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="ButtonStyle10" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="Storyboard1">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                    <EasingColorKeyFrame KeyTime="0:0:0.02" Value="#FF0A0A0A"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.12" Value="#FF535353"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="Storyboard2">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                    <EasingColorKeyFrame KeyTime="0:0:0.02" Value="#FF535353"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.12" Value="Black"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="231">
+                            <Rectangle x:Name="rectangle" Fill="Black" HorizontalAlignment="Left" Height="35" RadiusY="15.563" RadiusX="15.563" VerticalAlignment="Top" Width="80.563" Margin="70,0,0,0"/>
+                            <TextBlock HorizontalAlignment="Left" Height="20" Margin="95,6.332,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Foreground="White"><Run FlowDirection="RightToLeft" Text="ثبت"/></TextBlock>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                                <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="UIElement.MouseLeave">
+                                <BeginStoryboard x:Name="Storyboard2_BeginStoryboard" Storyboard="{StaticResource Storyboard2}"/>
+                            </EventTrigger>
+                            <Trigger Property="IsDefaulted" Value="true"/>
+                            <Trigger Property="IsMouseOver" Value="true"/>
+                            <Trigger Property="IsPressed" Value="true"/>
+                            <Trigger Property="IsEnabled" Value="false"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle11" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="Storyboard1">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                    <EasingColorKeyFrame KeyTime="0:0:0.02" Value="#FF0A0A0A"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.12" Value="#FF535353"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="Storyboard2">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                    <EasingColorKeyFrame KeyTime="0:0:0.02" Value="#FF535353"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.12" Value="Black"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="90" Margin="0,0,0,-10">
+                            <Rectangle x:Name="rectangle" Fill="Black" HorizontalAlignment="Left" Height="35" RadiusY="15.563" RadiusX="15.563" VerticalAlignment="Top" Width="80.563" Margin="5,3.668,0,0"/>
+                            <TextBlock HorizontalAlignment="Left" Height="20" Margin="30,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" Foreground="White"><Run FlowDirection="RightToLeft" Text="ثبت"/></TextBlock>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                                <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="UIElement.MouseLeave">
+                                <BeginStoryboard x:Name="Storyboard2_BeginStoryboard" Storyboard="{StaticResource Storyboard2}"/>
+                            </EventTrigger>
+                            <Trigger Property="IsDefaulted" Value="true"/>
+                            <Trigger Property="IsMouseOver" Value="true"/>
+                            <Trigger Property="IsPressed" Value="true"/>
+                            <Trigger Property="IsEnabled" Value="false"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle12" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="Storyboard1">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                    <EasingColorKeyFrame KeyTime="0:0:0.02" Value="#FF0A0A0A"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.12" Value="#FF535353"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="Storyboard2">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                    <EasingColorKeyFrame KeyTime="0:0:0.02" Value="#FF535353"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.12" Value="Black"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="90">
+                            <Rectangle x:Name="rectangle" Fill="Black" HorizontalAlignment="Left" Height="35" RadiusY="15.563" RadiusX="15.563" VerticalAlignment="Top" Width="85"/>
+                            <TextBlock HorizontalAlignment="Left" Height="20" Margin="25,7.5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="31.438" Foreground="White"><Run FlowDirection="RightToLeft" Text="ثبت"/></TextBlock>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                                <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="UIElement.MouseLeave">
+                                <BeginStoryboard x:Name="Storyboard2_BeginStoryboard" Storyboard="{StaticResource Storyboard2}"/>
+                            </EventTrigger>
+                            <Trigger Property="IsDefaulted" Value="true"/>
+                            <Trigger Property="IsMouseOver" Value="true"/>
+                            <Trigger Property="IsPressed" Value="true"/>
+                            <Trigger Property="IsEnabled" Value="false"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Storyboard x:Key="NewUserForm">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="newUser">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.088"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.985"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="newUser">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-155"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-2.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="newUser">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBox">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBox1">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBox2">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="button1">
+                <DiscreteObjectKeyFrame KeyTime="0:0:1" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Style x:Key="ButtonStyle13" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <ControlTemplate.Resources>
+                            <Storyboard x:Key="Storyboard1">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                    <EasingColorKeyFrame KeyTime="0:0:0.02" Value="#FF0A0A0A"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.12" Value="#FF535353"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                            <Storyboard x:Key="Storyboard2">
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+                                    <EasingColorKeyFrame KeyTime="0:0:0.02" Value="#FF535353"/>
+                                    <EasingColorKeyFrame KeyTime="0:0:0.12" Value="Black"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </ControlTemplate.Resources>
+                        <Grid HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="90">
+                            <Rectangle x:Name="rectangle" Fill="Black" HorizontalAlignment="Left" Height="35" RadiusY="15.563" RadiusX="15.563" VerticalAlignment="Top" Width="85"/>
+                            <TextBlock HorizontalAlignment="Left" Height="20" Margin="25,7.5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="31.438" Foreground="White"><Run FlowDirection="RightToLeft" Text="حذف"/><LineBreak/><Run FlowDirection="RightToLeft"/></TextBlock>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                                <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="UIElement.MouseLeave">
+                                <BeginStoryboard x:Name="Storyboard2_BeginStoryboard" Storyboard="{StaticResource Storyboard2}"/>
+                            </EventTrigger>
+                            <Trigger Property="IsDefaulted" Value="true"/>
+                            <Trigger Property="IsMouseOver" Value="true"/>
+                            <Trigger Property="IsPressed" Value="true"/>
+                            <Trigger Property="IsEnabled" Value="false"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="button2">
+            <BeginStoryboard Storyboard="{StaticResource NewUserForm}"/>
+        </EventTrigger>
+    </Window.Triggers>
     <Grid>
+        <Grid x:Name="addAnbar" Margin="300,140,319,122">
+            <Rectangle x:Name="addanbar" Fill="White" HorizontalAlignment="Left" Height="410" VerticalAlignment="Top" Width="340" RadiusY="24.5" RadiusX="24.5" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="25" Margin="107,10,0,0" TextWrapping="Wrap" Text="کد انبار" VerticalAlignment="Top" Width="165"/>
+            <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="25" Margin="107,40,0,0" TextWrapping="Wrap" Text="نام انبار" VerticalAlignment="Top" Width="165"/>
+            <Button x:Name="button3" Content="Button" HorizontalAlignment="Left" Height="35" Margin="240,280,0,0" VerticalAlignment="Top" Width="90" Style="{DynamicResource ButtonStyle12}"/>
+            <Button x:Name="button3_Copy" Content="Button" HorizontalAlignment="Left" Height="35" Margin="60,280,0,0" VerticalAlignment="Top" Width="90" Style="{DynamicResource ButtonStyle13}"/>
+        </Grid>
+
+        <Grid x:Name="newUser1" Margin="300,140,319,122">
+            <Rectangle x:Name="newUser" Fill="White" HorizontalAlignment="Left" Height="410" VerticalAlignment="Top" Width="340" RadiusY="24.5" RadiusX="24.5" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Image x:Name="image" HorizontalAlignment="Left" Height="125" Margin="126,10,0,0" VerticalAlignment="Top" Width="120" Source="external-user-ecommerce-basic-1-sbts2018-outline-color-sbts2018.png" Visibility="Hidden"/>
+            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="25" Margin="105,160,0,0" TextWrapping="Wrap" Text="نام کاربر" VerticalAlignment="Top" Width="165" Visibility="Hidden"/>
+            <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="25" Margin="105,205,0,0" TextWrapping="Wrap" Text="UserName" VerticalAlignment="Top" Width="165" Visibility="Hidden"/>
+            <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="25" Margin="105,235,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="165" Visibility="Hidden"/>
+            <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Height="35" Margin="144,280,0,0" VerticalAlignment="Top" Width="90" Style="{DynamicResource ButtonStyle12}" Visibility="Hidden"/>
+        </Grid>
         <Rectangle Fill="#FF191919" HorizontalAlignment="Left" Height="600" Margin="81,61,0,0" VerticalAlignment="Top" Width="270" RadiusY="20.615" RadiusX="20.615"/>
         <Rectangle HorizontalAlignment="Left" Height="50" Margin="95,74,0,0" VerticalAlignment="Top" Width="50">
             <Rectangle.Fill>
@@ -418,7 +670,7 @@
         </Rectangle>
         <Label Content="داشبورد" HorizontalAlignment="Left" Height="35" Margin="149,86,0,0" VerticalAlignment="Top" Width="140" Foreground="White" FontSize="18"/>
         <Path Data="M100,160 L320,160" HorizontalAlignment="Left" Height="1.833" Margin="99.437,140,0,0" Stretch="Fill" VerticalAlignment="Top" Width="231.251" Stroke="White"/>
-        <Rectangle HorizontalAlignment="Left" Height="35" Margin="300,86,0,0" VerticalAlignment="Top" Width="30.688">
+        <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="35" Margin="300,86,0,0" VerticalAlignment="Top" Width="30.688">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="icons8-messages-64.png" Stretch="Uniform"/>
             </Rectangle.Fill>
@@ -434,7 +686,8 @@
         <Button Content="Button" HorizontalAlignment="Left" Height="35" Margin="99.437,320,0,0" VerticalAlignment="Top" Width="231" Style="{DynamicResource ButtonStyle6}"/>
         <Button Content="Button" HorizontalAlignment="Left" Height="35" Margin="99.437,370,0,0" VerticalAlignment="Top" Width="231" Style="{DynamicResource ButtonStyle7}" Click="Button_Click_1"/>
         <Button Content="Button" HorizontalAlignment="Left" Height="35" Margin="99.437,615,0,0" VerticalAlignment="Top" Width="231" Style="{DynamicResource ButtonStyle8}" Click="Button_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="35" Margin="99.688,565,0,0" VerticalAlignment="Top" Width="231" Style="{DynamicResource ButtonStyle9}"/>
+        <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Height="35" Margin="99.688,565,0,0" VerticalAlignment="Top" Width="231" Style="{DynamicResource ButtonStyle9}"/>
+        <Path Data="M100,160 L320,160" HorizontalAlignment="Left" Height="1.833" Margin="99.688,548.167,0,0" Stretch="Fill" VerticalAlignment="Top" Width="231.251" Stroke="White"/>
 
     </Grid>
 </Window>
