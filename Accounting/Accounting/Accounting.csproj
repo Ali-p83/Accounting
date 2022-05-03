@@ -61,6 +61,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Loading.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -72,6 +76,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
     <Compile Include="Loading.xaml.cs">
       <DependentUpon>Loading.xaml</DependentUpon>
@@ -125,6 +132,48 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icons8-fund-accounting-48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-home-page-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-fund-accounting-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-logout-50 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-settings-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-user-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-messages-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-general-warning-sign-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-calculator-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-note-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-invoices-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-documents-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-check-dollar-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-check-dollar-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-shop-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
