@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Accounting"
         mc:Ignorable="d"
-        Title="Home" Height="672" Width="959" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}">
+        Title="Home" Height="672" Width="959" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" KeyDown="Window_KeyDown">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -432,8 +432,8 @@
         <Button Content="Button" HorizontalAlignment="Left" Height="35" Margin="99.437,220,0,0" VerticalAlignment="Top" Width="231" Style="{DynamicResource ButtonStyle4}"/>
         <Button Content="Button" HorizontalAlignment="Left" Height="35" Margin="99.437,270,0,0" VerticalAlignment="Top" Width="231" Style="{DynamicResource ButtonStyle5}"/>
         <Button Content="Button" HorizontalAlignment="Left" Height="35" Margin="99.437,320,0,0" VerticalAlignment="Top" Width="231" Style="{DynamicResource ButtonStyle6}"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="35" Margin="99.437,370,0,0" VerticalAlignment="Top" Width="231" Style="{DynamicResource ButtonStyle7}"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="35" Margin="99.437,615,0,0" VerticalAlignment="Top" Width="231" Style="{DynamicResource ButtonStyle8}"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="35" Margin="99.437,370,0,0" VerticalAlignment="Top" Width="231" Style="{DynamicResource ButtonStyle7}" Click="Button_Click_1"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="35" Margin="99.437,615,0,0" VerticalAlignment="Top" Width="231" Style="{DynamicResource ButtonStyle8}" Click="Button_Click"/>
         <Button Content="Button" HorizontalAlignment="Left" Height="35" Margin="99.688,565,0,0" VerticalAlignment="Top" Width="231" Style="{DynamicResource ButtonStyle9}"/>
 
     </Grid>

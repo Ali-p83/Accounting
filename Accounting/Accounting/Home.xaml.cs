@@ -23,5 +23,33 @@ namespace Accounting
         {
             InitializeComponent();
         }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Delete)
+            {
+                new MainWindow().Show();
+                Close();
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("calc.exe");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("سیستم شما برنامه ماشین حساب ندارد","Error");
+
+            }
+
+        }
     }
 }

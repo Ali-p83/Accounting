@@ -59,11 +59,17 @@ namespace Accounting
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Tab)
+            if (e.Key == Key.Delete)
             {
                 new Loading().Show();
                 Close();
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            new Home().Show();
+            Close();
         }
     }
 }
